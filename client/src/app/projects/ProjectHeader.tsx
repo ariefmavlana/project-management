@@ -1,3 +1,4 @@
+import Header from "@/components/Header";
 import {
   Clock,
   Filter,
@@ -9,15 +10,14 @@ import {
 } from "lucide-react";
 import React, { useState } from "react";
 import ModalNewProject from "./ModalNewProject";
-import Header from "@/components/Header";
 
 type Props = {
-  activeTab: string
-  setActiveTab: (tabName: string) => void
-}
+  activeTab: string;
+  setActiveTab: (tabName: string) => void;
+};
 
 const ProjectHeader = ({ activeTab, setActiveTab }: Props) => {
-  const [isModalNewProjectOpen, setIsModalNewProjectOpen] = useState(false)
+  const [isModalNewProjectOpen, setIsModalNewProjectOpen] = useState(false);
 
   return (
     <div className="px-4 xl:px-6">
@@ -85,18 +85,18 @@ const ProjectHeader = ({ activeTab, setActiveTab }: Props) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 type TabButtonProps = {
-  name: string
-  icon: React.ReactNode
-  setActiveTab: (tabName: string) => void
-  activeTab: string
+  name: string;
+  icon: React.ReactNode;
+  setActiveTab: (tabName: string) => void;
+  activeTab: string;
 };
 
 const TabButton = ({ name, icon, setActiveTab, activeTab }: TabButtonProps) => {
-  const isActive = activeTab === name
+  const isActive = activeTab === name;
 
   return (
     <button
@@ -108,7 +108,7 @@ const TabButton = ({ name, icon, setActiveTab, activeTab }: TabButtonProps) => {
       {icon}
       {name}
     </button>
-  )
-}
+  );
+};
 
-export default ProjectHeader
+export default ProjectHeader;

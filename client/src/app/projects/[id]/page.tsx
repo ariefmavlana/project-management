@@ -9,13 +9,13 @@ import Table from "../TableView";
 import ModalNewTask from "@/components/ModalNewTask";
 
 type Props = {
-  params: { id: string }
-}
+  params: { id: string };
+};
 
 const Project = ({ params }: Props) => {
-  const { id } = params
-  const [activeTab, setActiveTab] = useState("Board")
-  const [isModalNewTaskOpen, setIsModalNewTaskOpen] = useState(false)
+  const { id } = params;
+  const [activeTab, setActiveTab] = useState("Board");
+  const [isModalNewTaskOpen, setIsModalNewTaskOpen] = useState(false);
 
   return (
     <div>
@@ -38,7 +38,7 @@ const Project = ({ params }: Props) => {
         <Table id={id} setIsModalNewTaskOpen={setIsModalNewTaskOpen} />
       )}
     </div>
-  )
-}
+  );
+};
 
-export default Project
+export default Project;
