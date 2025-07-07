@@ -83,7 +83,7 @@ export const api = createApi({
       if (accessToken) {
         headers.set("Authorization", `Bearer ${accessToken}`)
       }
-      return headers;
+      return headers
     },
   }),
   reducerPath: "api",
