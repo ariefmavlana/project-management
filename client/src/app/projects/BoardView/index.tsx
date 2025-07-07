@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useGetTasksQuery, useUpdateTaskStatusMutation } from "@/state/api";
 import React from "react";
 import { DndProvider, useDrag, useDrop } from "react-dnd";
